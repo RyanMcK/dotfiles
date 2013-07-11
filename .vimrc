@@ -42,6 +42,8 @@ endif
 Bundle 'jistr/vim-nerdtree-tabs'
 " Syntax checking.
 Bundle 'scrooloose/syntastic'
+" Autocompletion.  Requires python support, libclang, and a compilation step.
+Bundle 'Valloric/YouCompleteMe'
 
 if install_vundle == 0
     :BundleInstall
@@ -102,7 +104,7 @@ set colorcolumn=80
 set pastetoggle=<F12>
 set formatoptions+=r
 " Remove trailing whitespace.
-autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml
+autocmd FileType c,cpp,java,go,php,javascript,python,tex,twig,xml,yml
     \ autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
@@ -134,6 +136,8 @@ let g:syntastic_cpp_compiler_options = ' -Wall -Wextra -pedantic -std=c++11'
 let g:syntastic_cpp_include_dirs = ['/usr/include', '/usr/local/include',
                                     \ '/opt/local/include']
 let g:syntastic_cpp_check_header = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " End plugin settings.
 
 " Begin strip whitespace function.
