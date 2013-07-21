@@ -43,7 +43,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 " Syntax checking.
 Bundle 'scrooloose/syntastic'
 " Autocompletion.  Requires python support, libclang, and a compilation step.
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 if install_vundle == 0
     :BundleInstall
