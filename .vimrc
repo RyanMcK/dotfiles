@@ -42,6 +42,8 @@ endif
 Bundle 'jistr/vim-nerdtree-tabs'
 " Syntax checking.
 Bundle 'scrooloose/syntastic'
+" C++11 syntax fixes.
+Bundle 'vim-scripts/Cpp11-Syntax-Support'
 " Autocompletion.  Requires python support, libclang, and a compilation step.
 " Bundle 'Valloric/YouCompleteMe'
 
@@ -108,6 +110,7 @@ autocmd FileType c,cpp,java,go,php,javascript,python,tex,twig,xml,yml
     \ autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+autocmd BufNewFile,BufRead *.cpp set syntax=cpp11
 " End formatting.
 
 " Begin key mappings.
