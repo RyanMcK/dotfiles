@@ -1,4 +1,8 @@
+export OMPI_CC="/opt/local/bin/gcc"
+export OMPI_CXX="/opt/local/bin/g++"
+
 export PATH="/opt/local/libexec/gnubin:/opt/local/bin:${PATH}"
+export PATH="/opt/local/lib/openmpi/bin:${PATH}"
 
 export CC="/opt/local/bin/gcc"
 export CXX="/opt/local/bin/g++"
